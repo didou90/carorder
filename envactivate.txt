@@ -1,0 +1,2 @@
+python manage.py runserver^C
+PS C:\Users\pcpc\Documents\CarImportProject\Order-management-system> & C:\Users\pcpc\Documents\CarImportProject\Order-management-system\carvenv\Scripts\Activate.ps1
