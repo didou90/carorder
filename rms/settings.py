@@ -27,7 +27,7 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['djangosupermarket.herokuapp.com','127.0.0.1', 'carorder-1.onrender.com']
+ALLOWED_HOSTS = ['djangosupermarket.herokuapp.com','127.0.0.1', 'carorder-1.onrender.com'] 
 
 
 # Application definition
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
