@@ -33,7 +33,7 @@ RUN pip install --upgrade html5lib xhtml2pdf
 # Copier le reste du projet
 COPY . .
 
-#EXPOSE 8000
+EXPOSE 8000
 
 # Démarrer le serveur Django
 #CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
