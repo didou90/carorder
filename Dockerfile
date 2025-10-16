@@ -46,7 +46,7 @@ EXPOSE 8000
 # Copier le .env pour que Django le trouve pendant le build
 COPY .env .env
 
-RUN python manage.py collectstatic --noinput
+#RUN python manage.py collectstatic --noinput
 
 
 CMD gunicorn rms.wsgi:application --bind 0.0.0.0:$PORT
