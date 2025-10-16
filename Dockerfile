@@ -24,6 +24,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir "urllib3<2" "requests<2.29"
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install crispy-bootstrap4
+RUN pip install --upgrade tablib django-import-export
 
 # Copier le reste du projet
 COPY . .
