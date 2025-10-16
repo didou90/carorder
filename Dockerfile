@@ -43,6 +43,9 @@ EXPOSE 8000
 #CMD gunicorn order-management-system.rms.wsgi:application --bind 0.0.0.0:$8000
 # Commande de démarrage compatible Render
 
+# Copier le .env pour que Django le trouve pendant le build
+COPY .env .env
+
 RUN python manage.py collectstatic --noinput
 
 
