@@ -33,7 +33,7 @@ RUN pip install --upgrade html5lib xhtml2pdf
 # Copier le reste du projet
 COPY . .
 
-EXPOSE 8000
+#EXPOSE 8000
 
 # Démarrer le serveur Django
 #CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
@@ -42,4 +42,4 @@ EXPOSE 8000
 # Remplace "monprojet" par le nom réel de ton dossier Django principal (celui contenant wsgi.py)
 #CMD gunicorn order-management-system.rms.wsgi:application --bind 0.0.0.0:$8000
 # Commande de démarrage compatible Render
-CMD gunicorn rms.wsgi:application --bind 0.0.0.0:8000
+CMD gunicorn rms.wsgi:application --bind 0.0.0.0:$PORT
