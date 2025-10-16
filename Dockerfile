@@ -23,6 +23,7 @@ COPY requirements.txt .
 # Installer les dépendances Python
 RUN pip install --no-cache-dir "urllib3<2" "requests<2.29"
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install crispy-bootstrap4
 
 # Copier le reste du projet
 COPY . .
