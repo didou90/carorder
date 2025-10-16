@@ -26,8 +26,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install crispy-bootstrap4
 RUN pip install --upgrade tablib django-import-export
 
+RUN pip install --upgrade django-crispy-forms
+RUN pip install --upgrade six
+RUN pip install --upgrade html5lib xhtml2pdf
+
 # Copier le reste du projet
 COPY . .
+
+EXPOSE 8000
 
 # Démarrer le serveur Django
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
