@@ -42,4 +42,8 @@ EXPOSE 8000
 # Remplace "monprojet" par le nom réel de ton dossier Django principal (celui contenant wsgi.py)
 #CMD gunicorn order-management-system.rms.wsgi:application --bind 0.0.0.0:$8000
 # Commande de démarrage compatible Render
+
+RUN python manage.py collectstatic --noinput
+
+
 CMD gunicorn rms.wsgi:application --bind 0.0.0.0:$PORT
